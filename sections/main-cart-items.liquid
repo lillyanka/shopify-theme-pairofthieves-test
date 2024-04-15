@@ -116,7 +116,8 @@
                           </div>
                         {%- else -%}
                           <div class="product-option">
-                            {{ component.original_price | money }}
+                            <span class="price--on-sale"><span class="price-item--regular">{{ component.product.selected_or_first_available_variant.price | money }}</span></span>
+                            <span class="price-item--sale">{{ component.original_price | money }}</span>
                           </div>
                         {%- endif -%}
     
